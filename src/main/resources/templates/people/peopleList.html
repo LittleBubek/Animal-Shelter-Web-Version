@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>People List</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>City</th>
+    </tr>
+    <tr th:each="person : ${people}">
+        <td th:text="${person.id}">1</td>
+        <td th:text="${person.firstName}">Ben</td>
+        <td th:text="${person.lastName}">Black</td>
+        <td th:text="${person.city}">Washington</td>
+    </tr>
+</table>
+
+</body>
+</html>
